@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tour Search</title>
+  <link rel="stylesheet" href="tour.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Find Your Tour</h1>
+      <div id="theme-toggle" class="theme-toggle">
+        <input type="checkbox" id="toggle-switch">
+        <label for="toggle-switch">🌙 / 🌞</label>
+      </div>
+    </header>
+
+    <!-- Filters Section -->
+    <div class="filters">
+      <div class="filter-item">
+        <label for="tour-type">Tour Type</label>
+        <select id="tour-type">
+          <option value="historical">Historical Tour</option>
+          <option value="jungle">Jungle Safari</option>
+          <option value="mountain">Mountain Adventure</option>
+        </select>
+      </div>
+
+      <div class="filter-item">
+        <label for="city">City</label>
+        <select id="city">
+          <option value="tehran">Tehran</option>
+          <option value="shiraz">Shiraz</option>
+          <option value="esfahan">Isfahan</option>
+        </select>
+      </div>
+
+      <div class="filter-item">
+        <label for="duration">Duration (Days)</label>
+        <input type="range" id="duration" min="1" max="15" step="1">
+      </div>
+
+      <button id="apply-filters" class="apply-btn">Apply Filters</button>
+    </div>
+
+    <!-- Search Results -->
+    <div class="search-results">
+      <h2>Search Results</h2>
+      <div class="tour-list">
+        <div class="tour-card">
+          <h3>Ancient Persepolis Tour</h3>
+          <p>Tour Type: Historical</p>
+          <p>Location: Shiraz</p>
+          <button class="view-details">View Details</button>
+        </div>
+
+        <div class="tour-card">
+          <h3>Jungle Safari Adventure</h3>
+          <p>Tour Type: Jungle Safari</p>
+          <p>Location: Mazandaran</p>
+          <button class="view-details">View Details</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('apply-filters').addEventListener('click', function() {
+      const tourType = document.getElementById('tour-type').value;
+      const city = document.getElementById('city').value;
+      const duration = document.getElementById('duration').value;
+
+      console.log(tourType, city, duration);
+    });
+
+    // Theme Toggle
+    document.getElementById('toggle-switch').addEventListener('change', function() {
+      document.body.classList.toggle('dark-mode');
+    });
+  </script>
+</body>
+</html>

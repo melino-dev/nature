@@ -1,0 +1,94 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #4b0082; /* Purple background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  /* Login container */
+  .login-container {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+  }
+  
+  /* Form heading */
+  h2 {
+    margin-bottom: 20px;
+    color: #4b0082;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  /* Input and select styles */
+  label {
+    display: block;
+    text-align: left;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #4b0082;
+  }
+  
+  input,
+  select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 2px solid #4b0082;
+    border-radius: 8px;
+    background-color: #f4f4f4;
+    font-size: 16px;
+    color: #333;
+  }
+  
+  input:focus,
+  select:focus {
+    outline: none;
+    border-color: #8a2be2; /* Neon purple color */
+    box-shadow: 0 0 10px rgba(138, 43, 226, 0.8); /* Neon glow effect */
+  }
+  
+  /* Submit button */
+  button {
+    width: 100%;
+    padding: 12px;
+    background-color: #8a2be2; /* Neon purple */
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #9b30b6;
+    box-shadow: 0 0 15px rgba(138, 43, 226, 0.8); /* Neon glow effect */
+  }
+  
+  /* Hover effect on the entire form */
+  .login-container:hover {
+    box-shadow: 0 0 20px rgba(138, 43, 226, 0.8); /* Neon glow */
+  }
+  
+  /* Responsive design */
+  @media (max-width: 480px) {
+    .login-container {
+      padding: 20px;
+      width: 90%;
+    }
+  }
+  

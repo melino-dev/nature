@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Doctor Search</title>
+  <link rel="stylesheet" href="medical.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Find Your Doctor</h1>
+      <!-- Toggle Button for Day/Night Mode -->
+      <button id="toggle-mode" class="mode-toggle-btn">
+        <span id="mode-icon">&#9728;</span> <!-- Sun icon (Day Mode) -->
+      </button>
+    </header>
+
+    <!-- Filters Section -->
+    <div class="filters">
+      <div class="filter-item">
+        <label for="specialty">Specialty</label>
+        <select id="specialty">
+          <option value="eye">Ophthalmology</option>
+          <option value="dentist">Dentistry</option>
+          <option value="orthopedic">Orthopedic</option>
+        </select>
+      </div>
+
+      <div class="filter-item">
+        <label for="city">City</label>
+        <select id="city">
+          <option value="tehran">Tehran</option>
+          <option value="shiraz">Shiraz</option>
+          <option value="isfahan">Isfahan</option>
+        </select>
+      </div>
+
+      <div class="filter-item">
+        <label for="price-range">Price Range</label>
+        <input type="range" id="price-range" min="0" max="1000" step="50">
+      </div>
+
+      <div class="filter-item">
+        <label for="online">Online Consultation</label>
+        <input type="checkbox" id="online">
+      </div>
+      
+      <button id="apply-filters" class="apply-btn">Apply Filters</button>
+    </div>
+
+    <!-- Search Results -->
+    <div class="search-results">
+      <h2>Search Results</h2>
+      <div class="doctor-list">
+        <div class="doctor-card">
+          <h3>Dr. Ali Mohammadi's Package</h3>
+          <p>Ophthalmologist</p>
+          <p>Hospitals: Noor Eye Hospital, Maryam Hospital</p>
+          <button class="view-details">View Details</button>
+        </div>
+
+        <div class="doctor-card">
+          <h3>Dr. Sara Hosseini's Package</h3>
+          <p>Ophthalmologist</p>
+          <p>Hospitals: Noor Hospital, Aali Clinic</p>
+          <button class="view-details">View Details</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="medical.js"></script>
+</body>
+</html>

@@ -1,0 +1,121 @@
+/* Body style */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+/* Navbar style */
+.navbar {
+    position: sticky;
+    background-color: #6a1b9a;  /* Purple background */
+    overflow: hidden;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Left menu: Logo and main links */
+.left-menu {
+    display: flex;
+    align-items: center;
+}
+
+.left-menu a {
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* Logo style */
+.logo img {
+    height: 40px;
+    width: auto;
+    padding: 5px 20px;
+}
+
+/* Hover effect for left menu links */
+.left-menu a:hover {
+    background-color: #ab47bc;  /* Lighter purple for hover */
+    color: white;
+}
+
+/* Right menu: Save, Search, Log In buttons */
+.right-menu {
+    display: flex;
+    align-items: center;
+}
+
+.right-menu .right-btn {
+    color: white;
+    padding: 12px 18px;
+    text-decoration: none;
+    font-size: 18px;
+    margin-left: 10px;
+}
+
+/* Hover effect for right-aligned buttons */
+.right-menu .right-btn:hover {
+    background-color: #9c27b0;  /* Slightly lighter purple on hover */
+    color: white;
+}
+
+/* Log In button style */
+.right-menu .login-btn {
+    background-color: #8e24aa;  /* Greenish purple for Log In button */
+    border-radius: 5px;
+}
+
+.right-menu .login-btn:hover {
+    background-color: #7b1fa2;  /* Darker shade on hover */
+}
+
+/* Responsive design for mobile devices */
+@media screen and (max-width: 768px) {
+    .left-menu a {
+        padding: 10px 15px;
+        font-size: 16px;
+    }
+
+    .logo img {
+        height: 30px;
+    }
+
+    .right-menu .right-btn {
+        padding: 10px 15px;
+        font-size: 16px;
+    }
+}
+
+
+/* styles.css */
+
+/* استایل پیش‌فرض برای روز */
+body.day {
+    background-color: white;
+    color: black;
+}
+
+body.night {
+    background-color: #2c3e50;
+    color: white;
+}
+
+/* استایل محتوا */
+.content {
+    text-align: center;
+    margin-top: 50px;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+p {
+    font-size: 1.2rem;
+}
+

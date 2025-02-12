@@ -1,0 +1,986 @@
+/* Body style */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+/* Navbar style */
+/* .navbar {
+    background-color: #6a1b9a;
+    overflow: hidden;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+} */
+
+
+/* Navbar style */
+.navbar {
+  background-color: #6a1b9a;
+  overflow: hidden;
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;  /* منو را ثابت می‌کند */
+  top: 0;           /* منو را به بالای صفحه می‌چسباند */
+  left: 0;          /* منو را از سمت چپ صفحه می‌چسباند */
+  width: 100%;      /* عرض منو 100% از صفحه */
+  z-index: 1000;    /* برای اینکه منو از سایر عناصر بالاتر باشد */
+}
+
+/* اضافه کردن فاصله به بالای صفحه برای جلوگیری از پوشاندن محتوا */
+body {
+  padding-top: 60px; /* ارتفاع منو */
+}
+
+
+/* Left menu: Logo and main links */
+.left-menu {
+    display: flex;
+    align-items: center;
+}
+
+.left-menu a {
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* Logo style */
+.logo img {
+    height: 40px;
+    width: auto;
+    padding: 5px 20px;
+}
+
+/* Hover effect for left menu links */
+.left-menu a:hover {
+    background-color: #ab47bc;
+    color: white;
+}
+
+/* Right menu: Save, Search, Log In buttons */
+.right-menu {
+    display: flex;
+    align-items: center;
+}
+
+.right-menu .right-btn {
+    color: white;
+    padding: 12px 18px;
+    text-decoration: none;
+    font-size: 18px;
+    margin-left: 10px;
+}
+
+/* Hover effect for right-aligned buttons */
+.right-menu .right-btn:hover {
+    background-color: #9c27b0;
+    color: white;
+}
+
+/* Log In button style */
+.right-menu .login-btn {
+    background-color: #8e24aa;
+    border-radius: 5px;
+}
+
+.right-menu .login-btn:hover {
+    background-color: #7b1fa2;
+}
+
+/* Image Section with Text */
+.image-section {
+    position: relative;
+    width: 100%;
+    height: 400px;  /* You can adjust the height */
+    background-image: url('./cariz-marix-4JDq4N0drGQ-unsplash.jpg');  /* Change this to your image path */
+    background-size: cover;
+    background-position: center;
+    margin-top: 20px;
+}
+
+.image-section .overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.5);  /* Semi-transparent background */
+    padding: 20px;
+}
+
+/* Responsive design for mobile devices */
+@media screen and (max-width: 768px) {
+    .left-menu a {
+        padding: 10px 15px;
+        font-size: 16px;
+    }
+
+    .logo img {
+        height: 30px;
+    }
+
+    .right-menu .right-btn {
+        padding: 10px 15px;
+        font-size: 16px;
+    }
+
+    .image-section {
+        height: 250px;  /* Adjust image height for mobile */
+    }
+
+    .image-section .overlay {
+        font-size: 20px;
+    }
+}
+
+
+/* style.css */
+
+  
+  .container {
+    display: flex;
+    height: 100vh;  /* ارتفاع صفحه کامل */
+  }
+  
+  .image-section {
+    flex: 1;  /* نصف عرض */
+    background-color: #8e44ad;  /* تم بنفش */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 50px;
+    border-radius: 20px;
+    /* margin-bottom: 500px; */
+  }
+  
+  .image-section img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;  /* گوشه‌های گرد */
+  }
+  
+  .text-section {
+    flex: 1;  /* نصف عرض */
+    padding: 20px;
+    /* background-color: #f0f0f0;  پس‌زمینه خاکی روشن */
+    color: #333;
+  }
+  
+  .text-section h1 {
+    color: #8e44ad;  /* رنگ بنفش برای عنوان */
+  }
+  
+  .text-section p {
+    line-height: 1.6;
+  }
+  
+
+
+
+
+
+
+
+
+
+
+  .slideshow-container {
+    position: relative;  /* تغییر موقعیت به relative */
+    width: 100%;
+    max-width: 600px;
+    overflow: hidden;
+    margin-left: 500px; /* موقعیت افقی */
+    top: -200px;  /* اینجا مقدار منفی به top می‌دهیم تا اسلایدشو بالاتر بیاید */
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.dot-container {
+    text-align: center;
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+}
+
+.dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 4px;
+    background-color: #f0f0f0;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+    cursor: pointer;
+}
+
+/* .active {
+
+    /* background-color: #717171; */
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Container to hold text and image side by side */
+.container {
+  display: flex;
+  height: 100vh; /* Full screen height */
+   margin-top: 30px ;
+    /* Optional margin to add space on top */ 
+}
+
+/* Text section */
+.text-section {
+  flex: 1;  /* Half width */
+  padding: 20px;
+  /* background-color: #f0f0f0; Light background for text */
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+}
+
+.text-section h1 {
+  color: #8e44ad;  /* Purple color for title */
+}
+
+/* .text-section h1{
+  /* margin-bottom: 200px; */
+
+
+
+
+
+/* حالت شب */
+.dark-theme .text-section {
+  color: white; /* تغییر رنگ متن به سفید در حالت شب */
+}
+
+
+.text-section p {
+  line-height: 2.3;
+  margin-bottom: 300px;
+}
+
+/* Image section */
+.image-section {
+  flex: 1;  /* Half width */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: #8e44ad;  Optional background for image section */
+}
+
+.image-section img {
+  width: 100%;  /* Fill width of the container */
+  height: 100%; /* Match the height of the text section */
+  object-fit: cover; /* Ensure the image covers the area */
+  border-radius: 8px;  /* Rounded corners for the image */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Style for the section header */
+.section-header {
+  text-align: center;
+  margin-bottom: 30px;
+  font-family: 'Arial', sans-serif;
+}
+
+.section-header h2 {
+  font-size: 2rem;
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Wrapper for the animated underline */
+.underline-wrapper {
+  position: relative;
+  width: 100%;
+  height: 50px; /* Adjust the height as per your design */
+  overflow: hidden;
+}
+
+/* Style for the SVG underline */
+.underline path {
+  stroke-dasharray: 400; /* Adjust length to fit the line */
+  stroke-dashoffset: 400; /* Start hidden */
+  animation: drawLine 2s ease forwards;
+}
+
+/* Animation for the SVG underline */
+@keyframes drawLine {
+  to {
+    stroke-dashoffset: 0; /* Unhide the line */
+  }
+}
+
+/* Responsive and adjustments */
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  justify-content: center;
+  padding: 50px;
+  margin-top: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .card-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .card-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
+
+
+
+
+
+
+/* بخش عنوان با انیمیشن */
+.section-header {
+  text-align: center;
+  margin-bottom: 30px;
+  font-family: 'Arial', sans-serif;
+}
+
+.team-title {
+  font-size: 2rem;
+  color: #8e44ad;  /* رنگ بنفش */
+  font-weight: bold;
+  position: relative;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.underline {
+  width: 50%;
+  height: 3px;
+  background-color: #8e44ad;
+  margin: 0 auto;
+  animation: drawLine 2s ease forwards;
+}
+
+@keyframes drawLine {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 50%;
+  }
+}
+
+
+
+
+/* Container for the cards */
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  justify-content: center;
+  padding: 50px;
+  margin-top: 0; /* حذف فاصله بالا */
+  margin-bottom: 300px; /* فاصله پایین رو می‌تونید تغییر بدید */
+}
+
+
+
+/* Card Style */
+.card {
+  background-color: #8e44ad;  /* Purple background for card */
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease;
+  box-sizing: border-box; /* تنظیم اندازه داخلی */
+  height: 100%; /* ارتفاع ثابت برای تمام کارت‌ها */
+}
+
+/* Card hover effect */
+.card:hover {
+  transform: scale(1.05);
+}
+
+/* Image section */
+.card-image img {
+  width: 100%;
+  height: 200px; /* Fixed height for image */
+  object-fit: cover; /* تصویر به صورت مناسب پر بشه */
+}
+
+/* Content of the card */
+.card-content {
+  padding: 20px;
+  color: white;
+  flex-grow: 1; /* کارت‌های متغیر ارتفاع رو متعادل می‌کنه */
+}
+
+/* Title of the card */
+.card-title {
+  font-size: 24px;
+  margin: 10px 0;
+  font-weight: bold;
+}
+
+/* Description text */
+.card-description {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* Footer and button */
+.card-footer {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.card-button {
+  background-color: #9b59b6;  /* Darker purple for button */
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+/* Button hover effect */
+.card-button:hover {
+  background-color: #8e24aa;
+}
+
+/* ریسپانسیو برای نمایش در صفحه‌های کوچکتر */
+@media screen and (max-width: 768px) {
+  .card-container {
+      grid-template-columns: repeat(2, 1fr); /* در صفحه‌های کوچکتر ۲ کارت در هر ردیف */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .card-container {
+      grid-template-columns: 1fr; /* در صفحه‌های خیلی کوچیک یک کارت در هر ردیف */
+  }
+}
+
+
+
+/* Container for the cards */
+.card-container {
+  display: grid; 
+  grid-template-columns: repeat(4, 1fr); 
+  gap: 30px; 
+  justify-content: center;
+  padding: 50px;
+  margin-top: -30px;  /* فاصله کارت‌ها رو از بالای صفحه کاهش می‌ده */
+}
+
+/* Card Style */
+.card {
+  background-color: #8e44ad;  
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease;
+  box-sizing: border-box;
+  height: 100%;
+}
+
+/* باقی کد‌ها هم به همون شکل باقی بمونه */
+
+
+
+
+
+
+
+
+
+
+
+
+.counter-container {
+  text-align: center;
+  margin: 50px 0;
+}
+
+.counter {
+  /* background-color: #f4f4f4; */
+  padding: 20px;
+  font-size: 20px;
+  border-radius: 10px;
+  display: inline-block;
+}
+
+.counter p {
+  font-size: 18px;
+}
+
+.counter span {
+  font-size: 35px;
+  font-weight: bold;
+  color: #6a1b9a;
+  transition: color 0.3s ease;
+}
+
+.counter span:hover {
+  color: #ab47bc; /* Change color on hover */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Container for the counter section */
+.counter-section {
+  display: flex;
+  justify-content: center; /* Center items horizontally */
+  align-items: center;     /* Center items vertically */
+  margin-top: 50px;
+  gap: 30px;               /* Space between the boxes */
+  flex-wrap: wrap;         /* Allow items to wrap on smaller screens */
+  padding: 20px;           /* Optional padding */
+  margin-bottom: 300px;
+}
+
+/* Style for each counter box */
+.counter-box {
+  text-align: center;
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 150px;
+  flex: 1 1 200px;          /* Allow resizing, minimum width of 200px */
+  max-width: 250px;         /* Limit the maximum width */
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* Icon style inside the counter box */
+.counter-box i {
+  font-size: 40px;
+  color: #8e44ad;
+  margin-bottom: 10px;
+}
+
+/* Style for the counter number */
+.counter {
+  font-size: 32px;
+  font-weight: bold;
+  color: #6a1b9a;
+  margin-bottom: 10px;
+}
+
+/* Style for the text below the counter */
+.counter p {
+  font-size: 16px;
+  color: #333;
+}
+
+/* Hover effect for the counter box */
+.counter-box:hover {
+  background-color: #8e44ad;
+  color: white;
+  transform: scale(1.05);
+}
+
+/* Ensure proper responsiveness on smaller screens */
+@media screen and (max-width: 768px) {
+  .counter-section {
+    gap: 20px; /* Reduce space between boxes on small screens */
+  }
+
+  .counter-box {
+    flex: 1 1 150px; /* Adjust width on smaller screens */
+    max-width: 200px; /* Limit max-width */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .counter-section {
+    gap: 15px; /* Further reduce gap on very small screens */
+  }
+
+  .counter-box {
+    flex: 1 1 120px; /* Adjust width even more for very small screens */
+    max-width: 180px; /* Further limit max-width */
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* استایل عمومی برای متن‌ها */
+.counter-section .counter-box p {
+  color: black; /* رنگ عادی برای حالت روز */
+}
+
+/* حالت شب (dark mode) */
+body.night .counter-section .counter-box p {
+  color: black; /* رنگ مشکی برای متن‌ها در حالت شب */
+}
+
+/* حالت شب برای برخی متون خاص */
+body.night .counter-section .counter-box p.buyers,
+body.night .counter-section .counter-box p.visitors,
+body.night .counter-section .counter-box p.comments,
+body.night .counter-section .counter-box p.products {
+  color: black; /* تغییر رنگ به مشکی برای این متون */
+}
+
+
+/* استایل عمومی برای متن‌ها */
+body p, body h1, body h2, body h3, body h4, body h5, body h6 {
+  color: black; /* رنگ عادی برای حالت روز */
+}
+
+/* حالت شب (dark mode) */
+body.night p, body.night h1, body.night h2, body.night h3, body.night h4, body.night h5, body.night h6 {
+  color: white; /* تغییر رنگ به سفید برای همه متن‌ها در حالت شب */
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Footer style */
+.footer {
+  background-color: #6a1b9a; /* Purple background */
+  color: white;
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  text-align: left;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.footer-text {
+  flex: 1;
+  font-size: 16px;
+  margin-right: 20px;
+}
+
+.footer-links {
+  flex: 1;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 15px;
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  transition: color 0.3s ease;
+}
+
+.footer-links a i {
+  margin-right: 10px; /* Space between icon and text */
+}
+
+.footer-links a:hover {
+  color: #ab47bc; /* Change color on hover */
+}
+
+.footer-links a:active {
+  color: #9c27b0; /* Darker purple when clicked */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-text {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .footer-links ul {
+    text-align: center;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Support Icon */
+.support-icon {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #ff4081; /* رنگ آیکون */
+  color: white;
+  padding: 15px;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  font-size: 24px;
+  z-index: 100;
+}
+
+.support-icon:hover {
+  background-color: #e040fb; /* تغییر رنگ آیکون هنگام هاور */
+}
+
+/* Chat Panel */
+.chat-panel {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 300px;
+  height: 400px;
+  background-color: #fff;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: none; /* پنل به صورت پیش‌فرض مخفی است */
+  z-index: 101;
+}
+
+.chat-header {
+  background-color: #ff4081;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  font-weight: bold;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.chat-body {
+  padding: 15px;
+  height: 270px;
+  overflow-y: auto;
+}
+
+.chat-footer {
+  display: flex;
+  padding: 10px;
+  background-color: #f4f4f4;
+}
+
+.chat-footer input {
+  flex-grow: 1;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+.chat-footer button {
+  background-color: #ff4081;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.chat-footer button:hover {
+  background-color: #e040fb;
+}
+
+.close-chat {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+
+/* styles.css */
+
+/* استایل پیش‌فرض برای روز */
+body.day {
+  background-color: white;
+  color: black;
+}
+
+body.night {
+  background-color: #2c3e50;
+  color: white;
+}
+
+/* استایل محتوا */
+.content {
+  text-align: center;
+  margin-top: 50px;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+p {
+  font-size: 1.2rem;
+}
+
+/* استایل آیکون تغییر حالت */
+.theme-icon {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  cursor: pointer;
+  font-size: 2rem;
+  z-index: 1000;
+}
+
+.theme-icon i {
+  transition: opacity 0.3s;
+}
+
+#sun-icon {
+  color: yellow;
+}
+
+#moon-icon {
+  color: white;
+}
