@@ -34,6 +34,9 @@ document.getElementById('toggle-mode').addEventListener('click', function() {
   document.querySelectorAll('.carousel-item').forEach(function(item) {
     item.classList.toggle('light-mode');
   });
+  document.querySelectorAll('.carousel').forEach(function(item) {
+    item.classList.toggle('light-mode');
+  });
 });
 
 // Handle 'More' button click to show more items (optional functionality)
