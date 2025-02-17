@@ -158,3 +158,13 @@ document.addEventListener("DOMContentLoaded", function() {
   // نمایش اسلاید اولیه
   showSlide(currentIndex);
 });
+
+
+
+
+
+// کد JS برای انیمیشن‌های بیشتر یا تعاملات دیگر
+document.addEventListener("DOMContentLoaded", function() {
+  // هر گونه انیمیشن یا تعاملات JS که بخواهید را در اینجا اضافه کنید.
+});
+

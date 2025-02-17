@@ -7,10 +7,12 @@
       <!-- Font Awesome CDN for icons -->
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-<!-- Link to FontAwesome for icons -->
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+      <script src="script.js"></script>
 
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<!-- Link to FontAwesome for icons -->
+
+
+      
 
     
     <title>Menu with Logo</title>
@@ -18,11 +20,14 @@
 </head>
 <body>
 
-    <!-- Navbar -->
-    <div class="navbar">
+
+      <div class="navbar">
         <!-- Left side: Logo and main menu -->
-        <div class="left-menu">
-            <a href="#" class="logo"><img src="./IMG_20250127_095043_922.png" alt="Logo"></a>
+        
+          <div class="logo-header">
+            <a href="#"><img src="./IMG_20250127_095043_922.png" alt="Logo"></a>
+          </div>
+          <div class="left-menu">
             <a href="#home">Home</a>
             <a href="#about">About</a>
             <a href="#services">Services</a>
@@ -30,18 +35,31 @@
             <a href="medical.html">Medical</a>
             <a href="tour.html">Tours</a>
         </div>
-
+    
         <!-- Right side: Save, Search, Log In -->
         <div class="right-menu">
-            <a href="#saves" class="right-btn">Saves</a>
-            <a href="#search" class="right-btn">Search</a>
-            <!-- <a href="#login" class="right-btn login-btn">Log In</a> -->
-            <a href="login.html" class="right-btn login-btn">Log In</a>
-            <div id="toggle-theme" class="theme-icon">
-              <i class="fas fa-sun" id="sun-icon"></i>
-              <i class="fas fa-moon" id="moon-icon" style="display:none;"></i>
-          </div>
+            <a href="#saves" class="right-btn">
+                <i class="fas fa-bookmark"></i> <!-- آیکون برای Saves -->
+            </a>
+            <a href="#search" class="right-btn">
+                <i class="fas fa-search"></i> <!-- آیکون برای Search -->
+            </a>
+
+                        <!-- آیکون تغییر شب و روز -->
+                        <a href="javascript:void(0);" id="toggle-theme" class="right-btn">
+                          <i class="fas fa-sun" id="sun-icon"></i>
+                          <i class="fas fa-moon" id="moon-icon" style="display:none;"></i>
+                      </a>
+            <!-- لینک Log In که به صفحه  login.html متصل شده -->
+            <a href="login.html" class="right-btn login-btn">
+                <i class="fas fa-bars"></i> <!-- آیکون سه خط برای Log In -->
+            </a>
+
         </div>
+    </div>
+    
+      
+      
     </div>
 
     <!-- Image Section with Text -->
@@ -269,35 +287,67 @@
 
 
 <!-- Footer -->
+
+
+
+    <!-- Navbar -->
+<!-- Footer -->
+<!-- Footer -->
+<!-- Footer -->
+<!-- Footer -->
 <footer class="footer">
-  <div class="footer-content">
-    <div class="footer-text">
-      <p>معالی اباد مجتمع تجاری آفتاب فارس( آفتاب بزرگ )  طبقه اول اداری  واحد ۴۱۳ </p>
-    </div>
-    <div class="footer-links">
+  <!-- سمت چپ: دسترسی سریع -->
+
+  <!-- وسط: لوگو و توضیحات -->
+<!-- Footer -->
+<footer class="footer">
+  <!-- سمت چپ: دسترسی سریع -->
+  <div class="footer-left">
+      <h3>Quick Access</h3>
       <ul>
-        <li>
-          <a href="https://www.instagram.com/p/DFhQMzmBEF4/?igsh=MWJzanVsMWV4c21ycw==" target="_blank" class="social-link">
-            <i class="fab fa-instagram"></i> Instagram
-          </a>
-        </li>
-        <li>
-          <a href="tel:+7136353035" class="social-link">
-            <i class="fas fa-phone-alt"></i> +7136353035
-          </a>
-          <!-- <a href="tel:+9176015053" class="social-link">
-            <i class="fas fa-phone-alt"></i> ++9176015053
-          </a> -->
-        </li>
-        <li>
-          <a href="mailto:info@example.com" class="social-link">
-            <i class="fas fa-envelope"></i> info@example.com
-          </a>
-        </li>
+          <li><i class="fas fa-map-marker-alt"></i><a href="tour.html#domestic-tour">Domestic Tours</a></li>
+          <li><i class="fas fa-plane"></i><a href="tour.html#international-tour">International Tours</a></li>
+          <li><i class="fas fa-tree"></i><a href="tour.html#nature-tour">Nature Tours</a></li>
+          <li><i class="fas fa-medkit"></i><a href="medical.html">Medical</a></li>
       </ul>
-    </div>
+  </div>
+
+  <!-- وسط: لوگو و توضیحات -->
+  <div class="footer-center">
+      <div class="footer-logo">
+          <img src="./IMG_20250127_095043_922.png" alt="Tirazis Logo">
+      </div>
+      <div class="footer-description">
+          <p>Tirazis Travel Agency is your gateway to unforgettable travel experiences. We offer a wide range of tours, from relaxing beach vacations to adventurous expeditions. Explore the world with us!</p>
+      </div>
+  </div>
+
+  <!-- سمت راست: تماس و آدرس -->
+  <div class="footer-right">
+      <h3>Contact Us</h3>
+      <ul>
+          <li><i class="fas fa-map-marker-alt"></i> Location: Shiraz, Maali Abad, Aftab Mall</li>
+          <li><i class="fas fa-phone-alt"></i> Phone: 09176015053</li>
+          <li><i class="fas fa-clock"></i> Hours: Sunday to Thursday 8:00 AM - 1:30 PM</li>
+      </ul>
   </div>
 </footer>
+
+
+  <!-- سمت راست: تماس و آدرس -->
+
+</footer>
+
+
+
+
+  
+
+    <!-- Waves JS Animation -->
+
+
+
+
 
 
 
@@ -332,3 +382,58 @@
 
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

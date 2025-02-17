@@ -222,4 +222,104 @@ body {
     background-color: #9c27b0;
     box-shadow: 0 0 15px rgba(156, 39, 176, 0.6);
   }
+
+
+
+
+
+
+
+
+
+  footer {
+    position: relative;
+    background-color: #8e24aa; /* بنفش روشن */
+    color: white;
+    padding: 40px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    margin: 0; /* کادر سفید پایین حذف میشه */
+    border: none; /* حاشیه‌ای برای فوتر نباشه */
+  }
+  
+  /* بخش سمت چپ: دسترسی سریع */
+  .footer-left, .footer-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 30px;
+  }
+  
+  /* بخش وسط: لوگو و توضیحات */
+  .footer-center {
+    text-align: center;
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* تراز عمودی لوگو */
+    align-items: center; /* تراز افقی لوگو */
+  }
+  
+  /* لوگو */
+  .footer-logo img {
+    max-width: 180px;
+    margin-bottom: 20px;
+  }
+  
+  /* توضیحات */
+  .footer-description {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.8;
+    text-align: center;
+    max-width: 80%; /* کنترل عرض متن */
+    margin: 0 auto;
+  }
+  
+  /* لینک‌های دسترسی سریع با آیکون */
+  .footer-left ul, .footer-right ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-left li, .footer-right li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .footer-left a, .footer-right a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    margin-left: 10px; /* فاصله آیکون از لینک */
+    transition: color 0.3s ease;
+  }
+  
+  .footer-left a:hover, .footer-right a:hover {
+    color: #ff4081;
+  }
+  
+  .footer-left i, .footer-right i {
+    font-size: 18px;
+    color: white;
+  }
+  
+  /* بخش تماس و آدرس سمت راست */
+  .footer-right i {
+    font-size: 18px;
+    margin-right: 15px; /* فاصله بیشتر بین آیکون و متن */
+  }
+  
+  .footer-right li {
+    margin-bottom: 15px; /* فاصله بیشتر بین آیتم‌ها */
+  }
+  
+  /* حذف موج از فوتر */
+  footer::before {
+    content: none;
+  }
   

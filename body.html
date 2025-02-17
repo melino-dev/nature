@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نقشه بدن انسان</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        .container {
+            position: relative;
+        }
+        img {
+            width: 450px;
+            height: auto;
+        }
+        .part {
+            position: absolute;
+            background: rgba(255, 0, 0, 0.2);
+            cursor: pointer;
+            border-radius: 50%;
+            transition: background 0.3s;
+        }
+        .part:hover {
+            background: rgba(255, 0, 0, 0.5);
+        }
+        .head { top: 20px; left: 190px; width: 70px; height: 80px; }
+        .neck { top: 100px; left: 205px; width: 40px; height: 30px; }
+        .chest { top: 130px; left: 160px; width: 120px; height: 100px; }
+        .abdomen { top: 230px; left: 165px; width: 110px; height: 90px; }
+        .left-arm { top: 140px; left: 80px; width: 50px; height: 140px; }
+        .right-arm { top: 140px; left: 310px; width: 50px; height: 140px; }
+        .left-hand { top: 280px; left: 75px; width: 50px; height: 50px; }
+        .right-hand { top: 280px; left: 310px; width: 50px; height: 50px; }
+        .left-leg { top: 320px; left: 180px; width: 50px; height: 150px; }
+        .right-leg { top: 320px; left: 230px; width: 50px; height: 150px; }
+        .left-foot { top: 470px; left: 175px; width: 50px; height: 40px; }
+        .right-foot { top: 470px; left: 230px; width: 50px; height: 40px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="https://www.pngall.com/wp-content/uploads/2018/03/Human-Body-PNG-Clipart.png" alt="Human Body">
+        <div class="part head" onclick="logPart('سر')"></div>
+        <div class="part neck" onclick="logPart('گردن')"></div>
+        <div class="part chest" onclick="logPart('سینه')"></div>
+        <div class="part abdomen" onclick="logPart('شکم')"></div>
+        <div class="part left-arm" onclick="logPart('بازوی چپ')"></div>
+        <div class="part right-arm" onclick="logPart('بازوی راست')"></div>
+        <div class="part left-hand" onclick="logPart('دست چپ')"></div>
+        <div class="part right-hand" onclick="logPart('دست راست')"></div>
+        <div class="part left-leg" onclick="logPart('پای چپ')"></div>
+        <div class="part right-leg" onclick="logPart('پای راست')"></div>
+        <div class="part left-foot" onclick="logPart('پا چپ')"></div>
+        <div class="part right-foot" onclick="logPart('پا راست')"></div>
+    </div>
+
+    <script>
+        function logPart(part) {
+            console.log("قسمت انتخاب شده: " + part);
+        }
+    </script>
+</body>
+</html>

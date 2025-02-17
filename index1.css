@@ -19,7 +19,7 @@ body {
 
 /* Navbar style */
 .navbar {
-  background-color: #6a1b9a;
+  background-color: #8e24aa;
   overflow: hidden;
   padding: 10px 0;
   display: flex;
@@ -39,9 +39,34 @@ body {
 
 
 /* Left menu: Logo and main links */
+.left-menu .logo img:hover {
+  /* هیچ تغییر هاوری در لوگو اعمال نمیشه */
+  transform: none;
+}
+/* برای لینک‌ها در منوی چپ */
+.left-menu a:hover {
+  background-color: #ab47bc;
+  color: white;
+  border-radius: 8px;  /* گرد کردن گوشه‌ها */
+}
+
+/* برای دکمه‌ها در منوی راست */
+.right-menu .right-btn:hover {
+  background-color: #9c27b0;
+  color: white;
+  border-radius: 8px;  /* گرد کردن گوشه‌ها */
+}
+
+/* برای دکمه‌ی ورود */
+.right-menu .login-btn:hover {
+  background-color: #7b1fa2;
+  border-radius: 8px;  /* گرد کردن گوشه‌ها */
+}
+/* ------------------------------------------------------ */
 .left-menu {
     display: flex;
     align-items: center;
+    margin-left: -600px;
 }
 
 .left-menu a {
@@ -53,8 +78,8 @@ body {
 }
 
 /* Logo style */
-.logo img {
-    height: 40px;
+.logo-header img {
+    height: 60px;
     width: auto;
     padding: 5px 20px;
 }
@@ -762,81 +787,118 @@ body.night p, body.night h1, body.night h2, body.night h3, body.night h4, body.n
 
 
 
-/* Footer style */
-.footer {
-  background-color: #6a1b9a; /* Purple background */
-  color: white;
-  padding: 40px 20px;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  flex-direction: column;
-  text-align: left;
-}
 
-.footer-content {
+
+
+
+
+/* تنظیمات فوتر */
+/* تنظیمات فوتر *
+
+
+
+
+/* تنظیمات فوتر */
+/* تنظیمات فوتر */
+/* تنظیمات کلی فوتر */
+footer {
+  position: relative;
+  background-color: #8e24aa; /* بنفش روشن */
+  color: white;
+  padding: 40px 0;
   display: flex;
   justify-content: space-between;
-  width: 100%;
+  align-items: center;
+  text-align: left;
+  margin: 0; /* کادر سفید پایین حذف میشه */
+  border: none; /* حاشیه‌ای برای فوتر نباشه */
 }
 
-.footer-text {
+/* بخش سمت چپ: دسترسی سریع */
+.footer-left, .footer-right {
   flex: 1;
-  font-size: 16px;
-  margin-right: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 30px;
 }
 
-.footer-links {
-  flex: 1;
+/* بخش وسط: لوگو و توضیحات */
+.footer-center {
+  text-align: center;
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* تراز عمودی لوگو */
+  align-items: center; /* تراز افقی لوگو */
 }
 
-.footer-links ul {
+/* لوگو */
+.footer-logo img {
+  max-width: 180px;
+  margin-bottom: 20px;
+}
+
+/* توضیحات */
+.footer-description {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.8;
+  text-align: center;
+  max-width: 80%; /* کنترل عرض متن */
+  margin: 0 auto;
+}
+
+/* لینک‌های دسترسی سریع با آیکون */
+.footer-left ul, .footer-right ul {
   list-style: none;
   padding: 0;
-  margin: 0;
 }
 
-.footer-links li {
-  margin-bottom: 15px;
-}
-
-.footer-links a {
-  color: white;
-  text-decoration: none;
-  font-size: 18px;
+.footer-left li, .footer-right li {
+  margin-bottom: 10px;
   display: flex;
   align-items: center;
+}
+
+.footer-left a, .footer-right a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  margin-left: 10px; /* فاصله آیکون از لینک */
   transition: color 0.3s ease;
 }
 
-.footer-links a i {
-  margin-right: 10px; /* Space between icon and text */
+.footer-left a:hover, .footer-right a:hover {
+  color: #ff4081;
 }
 
-.footer-links a:hover {
-  color: #ab47bc; /* Change color on hover */
+.footer-left i, .footer-right i {
+  font-size: 18px;
+  color: white;
 }
 
-.footer-links a:active {
-  color: #9c27b0; /* Darker purple when clicked */
+/* بخش تماس و آدرس سمت راست */
+.footer-right i {
+  font-size: 18px;
+  margin-right: 15px; /* فاصله بیشتر بین آیکون و متن */
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .footer-content {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .footer-text {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-
-  .footer-links ul {
-    text-align: center;
-  }
+.footer-right li {
+  margin-bottom: 15px; /* فاصله بیشتر بین آیتم‌ها */
 }
+
+/* حذف موج از فوتر */
+footer::before {
+  content: none;
+}
+
+
+
+
+
+
+
 
 
 

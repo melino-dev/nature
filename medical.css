@@ -259,3 +259,372 @@ body {
     background-color: #ff4081;
   }
   
+
+
+
+
+
+
+  /* Carousel Section */
+.categories {
+  margin-top: 40px;
+}
+
+.carousel {
+  margin-bottom: 30px;
+  background-color: #333;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.carousel h2 {
+  font-size: 24px;
+  color: #9c27b0;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.carousel-items {
+  display: flex;
+  overflow: hidden;
+  gap: 20px;
+}
+
+.carousel-item {
+  background-color: #444;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  min-width: 280px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.carousel-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  background-color: #555;
+}
+
+.carousel-item h3 {
+  font-size: 18px;
+  color: #9c27b0;
+}
+
+.carousel-item p {
+  font-size: 14px;
+  color: #ccc;
+}
+
+.carousel-item button {
+  padding: 12px;
+  background-color: #ff4081;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.carousel-item button:hover {
+  background-color: #9c27b0;
+  box-shadow: 0 0 15px rgba(156, 39, 176, 0.6);
+}
+
+/* More Button */
+.more-btn {
+  padding: 12px 20px;
+  background-color: #9c27b0;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 20px;
+  display: block;
+  width: 100%;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.more-btn:hover {
+  background-color: #ff4081;
+  box-shadow: 0 0 15px rgba(156, 39, 176, 0.6);
+}
+
+/* Light Mode Adjustments */
+
+/* For Light Mode (Day) */
+body.light-mode {
+  background-color: #fff; /* White background */
+  color: #333; /* Black text */
+}
+
+.container.light-mode {
+  background-color: #f9f9f9; /* Light background for the container */
+  color: #333; /* Dark text */
+}
+
+header h1.light-mode {
+  color: #333; /* Dark title */
+  text-shadow: none; /* Remove text shadow in light mode */
+}
+
+/* Mode Toggle Button */
+.mode-toggle-btn {
+  color: #333; /* Dark mode button color */
+}
+
+.filters .filter-item select,
+.filters .filter-item input[type="range"],
+.filters .filter-item input[type="checkbox"] {
+  background-color: #fff; /* White background in light mode */
+  color: #333; /* Black text */
+  border-color: #9c27b0; /* Border color remains purple */
+}
+
+
+
+
+
+/* Basic styling for the carousel */
+.carousel-container {
+  position: relative;
+  overflow: hidden;
+  /* display: flex;
+  align-items: center; */
+}
+
+/* .carousel-item a {
+  display: inline-block;
+}
+
+.carousel-item .view-details {
+  display: block;
+} */
+
+
+
+
+.carousel-items {
+  display: flex;
+  transition: transform 0.3s ease;
+}
+
+/* .carousel-item {
+  flex: 0 0 20%;
+  padding: 10px;
+  transition: background-color 0.3s ease;
+} */
+
+
+.carousel-item {
+  height: 150px; /* مقدار دلخواه برای ارتفاع */
+  background-color: #444;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  min-width: 280px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  flex: 1 0 auto; /* Fix flex to maintain even width */
+}
+
+
+.carousel-prev, .carousel-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  /* font-size: 2rem; */
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-size: 2rem;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 10;
+}
+
+.carousel-prev {
+  left: 10px;
+}
+
+.carousel-next {
+  right: 10px;
+}
+
+.carousel-prev:hover, .carousel-next:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Night Mode */
+/* body:not(.light-mode) .carousel-item {
+  background-color: #333; Dark background for carousel items
+} */
+
+/* body:not(.light-mode) .carousel-prev, 
+body:not(.light-mode) .carousel-next {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+} */
+/* Light Mode Adjustments */
+body.light-mode {
+  background-color: #fff; /* پس‌زمینه روشن */
+  color: #333; /* متن تیره */
+}
+
+.container.light-mode {
+  background-color: #f9f9f9; /* پس‌زمینه روشن برای container */
+  color: #333; /* متن تیره */
+}
+
+header h1.light-mode {
+  color: #333; /* عنوان تیره */
+  text-shadow: none; /* حذف سایه عنوان در light mode */
+}
+
+/* برای تغییر پس‌زمینه آیتم‌های کاروسل در light mode */
+body.light-mode .carousel-item {
+  background-color: #f0f0f0; /* پس‌زمینه روشن برای آیتم‌های کاروسل */
+}
+
+body.light-mode .carousel-prev, 
+body.light-mode .carousel-next {
+  background-color: rgba(255, 255, 255, 0.5); /* رنگ دکمه‌ها سفید با شفافیت در light mode */
+  color: black; /* رنگ متن دکمه‌ها در light mode */
+}
+
+/* تغییر hover آیتم‌های کاروسل در light mode */
+body.light-mode .carousel-item:hover {
+  background-color: #ddd; /* پس‌زمینه روشن برای hover */
+}
+
+/* تغییر دکمه‌ها در light mode */
+body.light-mode .carousel-prev:hover, 
+body.light-mode .carousel-next:hover {
+  background-color: rgba(255, 255, 255, 0.7); /* دکمه‌ها در حالت hover روشن‌تر می‌شوند */
+}
+
+/* Adjust carousel item hover for light mode */
+body.light-mode .carousel-item:hover {
+  background-color: #ddd; /* Light hover effect */
+}
+
+body:not(.light-mode) .carousel-item:hover {
+  background-color: #444; /* Dark hover effect */
+}
+
+
+
+/* حالت شب (dark mode) */
+body {
+  background-color: #1b1b1b;  /* پس‌زمینه تیره در حالت شب */
+  color: #fff;  /* رنگ متن سفید */
+}
+
+
+
+
+
+footer {
+  position: relative;
+  background-color: #8e24aa; /* بنفش روشن */
+  color: white;
+  padding: 40px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+  margin: 0; /* کادر سفید پایین حذف میشه */
+  border: none; /* حاشیه‌ای برای فوتر نباشه */
+}
+
+/* بخش سمت چپ: دسترسی سریع */
+.footer-left, .footer-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 30px;
+}
+
+/* بخش وسط: لوگو و توضیحات */
+.footer-center {
+  text-align: center;
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* تراز عمودی لوگو */
+  align-items: center; /* تراز افقی لوگو */
+}
+
+/* لوگو */
+.footer-logo img {
+  max-width: 180px;
+  margin-bottom: 20px;
+}
+
+/* توضیحات */
+.footer-description {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.8;
+  text-align: center;
+  max-width: 80%; /* کنترل عرض متن */
+  margin: 0 auto;
+}
+
+/* لینک‌های دسترسی سریع با آیکون */
+.footer-left ul, .footer-right ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-left li, .footer-right li {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.footer-left a, .footer-right a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  margin-left: 10px; /* فاصله آیکون از لینک */
+  transition: color 0.3s ease;
+}
+
+.footer-left a:hover, .footer-right a:hover {
+  color: #ff4081;
+}
+
+.footer-left i, .footer-right i {
+  font-size: 18px;
+  color: white;
+}
+
+/* بخش تماس و آدرس سمت راست */
+.footer-right i {
+  font-size: 18px;
+  margin-right: 15px; /* فاصله بیشتر بین آیکون و متن */
+}
+
+.footer-right li {
+  margin-bottom: 15px; /* فاصله بیشتر بین آیتم‌ها */
+}
+
+/* حذف موج از فوتر */
+footer::before {
+  content: none;
+}
+
+
+
+
+
+
+
+
+

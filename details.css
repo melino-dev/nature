@@ -1,0 +1,510 @@
+/* General Body Style */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+  }
+
+
+  .navbar {
+    background-color: #8e24aa;
+    overflow: hidden;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;  /* منو را ثابت می‌کند */
+    top: 0;           /* منو را به بالای صفحه می‌چسباند */
+    left: 0;          /* منو را از سمت چپ صفحه می‌چسباند */
+    width: 100%;      /* عرض منو 100% از صفحه */
+    z-index: 1000;    /* برای اینکه منو از سایر عناصر بالاتر باشد */
+  }
+  
+  /* اضافه کردن فاصله به بالای صفحه برای جلوگیری از پوشاندن محتوا */
+  body {
+    padding-top: 60px; /* ارتفاع منو */
+  }
+  
+  
+  /* Left menu: Logo and main links */
+  .left-menu .logo img:hover {
+    /* هیچ تغییر هاوری در لوگو اعمال نمیشه */
+    transform: none;
+  }
+  /* برای لینک‌ها در منوی چپ */
+  .left-menu a:hover {
+    background-color: #ab47bc;
+    color: white;
+    border-radius: 8px;  /* گرد کردن گوشه‌ها */
+  }
+  
+  /* برای دکمه‌ها در منوی راست */
+  .right-menu .right-btn:hover {
+    background-color: #9c27b0;
+    color: white;
+    border-radius: 8px;  /* گرد کردن گوشه‌ها */
+  }
+  
+  /* برای دکمه‌ی ورود */
+  .right-menu .login-btn:hover {
+    background-color: #7b1fa2;
+    border-radius: 8px;  /* گرد کردن گوشه‌ها */
+  }
+  /* ------------------------------------------------------ */
+  .left-menu {
+      display: flex;
+      align-items: center;
+      margin-left: -600px;
+  }
+  
+  .left-menu a {
+      color: white;
+      text-align: center;
+      padding: 14px 20px;
+      text-decoration: none;
+      font-size: 18px;
+  }
+  
+  /* Logo style */
+  .logo-header img {
+      height: 60px;
+      width: auto;
+      padding: 5px 20px;
+  }
+  
+  /* Hover effect for left menu links */
+  .left-menu a:hover {
+      background-color: #ab47bc;
+      color: white;
+  }
+  
+  /* Right menu: Save, Search, Log In buttons */
+  .right-menu {
+      display: flex;
+      align-items: center;
+  }
+  
+  .right-menu .right-btn {
+      color: white;
+      padding: 12px 18px;
+      text-decoration: none;
+      font-size: 18px;
+      margin-left: 10px;
+  }
+  
+  /* Hover effect for right-aligned buttons */
+  .right-menu .right-btn:hover {
+      background-color: #9c27b0;
+      color: white;
+  }
+  
+  /* Log In button style */
+  .right-menu .login-btn {
+      background-color: #8e24aa;
+      border-radius: 5px;
+  }
+  
+  .right-menu .login-btn:hover {
+      background-color: #7b1fa2;
+  }
+
+  
+
+
+
+  footer {
+    position: relative;
+    background-color: #8e24aa; /* بنفش روشن */
+    color: white;
+    padding: 40px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    margin: 0; /* کادر سفید پایین حذف میشه */
+    border: none; /* حاشیه‌ای برای فوتر نباشه */
+  }
+  
+  /* بخش سمت چپ: دسترسی سریع */
+  .footer-left, .footer-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 30px;
+  }
+  
+  /* بخش وسط: لوگو و توضیحات */
+  .footer-center {
+    text-align: center;
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* تراز عمودی لوگو */
+    align-items: center; /* تراز افقی لوگو */
+  }
+  
+  /* لوگو */
+  .footer-logo img {
+    max-width: 180px;
+    margin-bottom: 20px;
+  }
+  
+  /* توضیحات */
+  .footer-description {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.8;
+    text-align: center;
+    max-width: 80%; /* کنترل عرض متن */
+    margin: 0 auto;
+  }
+  
+  /* لینک‌های دسترسی سریع با آیکون */
+  .footer-left ul, .footer-right ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-left li, .footer-right li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .footer-left a, .footer-right a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    margin-left: 10px; /* فاصله آیکون از لینک */
+    transition: color 0.3s ease;
+  }
+  
+  .footer-left a:hover, .footer-right a:hover {
+    color: #ff4081;
+  }
+  
+  .footer-left i, .footer-right i {
+    font-size: 18px;
+    color: white;
+  }
+  
+  /* بخش تماس و آدرس سمت راست */
+  .footer-right i {
+    font-size: 18px;
+    margin-right: 15px; /* فاصله بیشتر بین آیکون و متن */
+  }
+  
+  .footer-right li {
+    margin-bottom: 15px; /* فاصله بیشتر بین آیتم‌ها */
+  }
+  
+  /* حذف موج از فوتر */
+  footer::before {
+    content: none;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  /* Container */
+  .container {
+    width: 85%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* Section */
+  section {
+    padding: 40px 0;
+  }
+  
+  /* Heading Style */
+  h2 {
+    font-size: 28px;
+    color: #9c27b0;
+    margin-bottom: 30px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  
+  /* Hospital Section */
+  .hospital-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: space-between;
+  }
+  
+  .hospital-card {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 48%;
+    transition: transform 0.3s ease;
+  }
+  
+  .hospital-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .hospital-card img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .hospital-details {
+    padding: 15px;
+  }
+  
+  .hospital-details h3 {
+    font-size: 22px;
+    color: #9c27b0;
+    margin-bottom: 10px;
+  }
+  
+  .hospital-details p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 15px;
+  }
+  
+  .hospital-details .btn {
+    text-decoration: none;
+    background-color: #9c27b0;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-size: 14px;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+  }
+  
+  .hospital-details .btn:hover {
+    background-color: #7b1fa2;
+  }
+  
+  /* Doctor Resume Section */
+  .doctor-resume {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-top: 40px;
+  }
+  
+  .doctor-resume .resume-card {
+    padding: 20px;
+  }
+  
+  .doctor-resume h3 {
+    font-size: 24px;
+    color: #9c27b0;
+    margin-bottom: 15px;
+  }
+  
+  .doctor-resume p {
+    font-size: 16px;
+    color: #444;
+  }
+  
+  .doctor-resume ul {
+    list-style: none;
+    padding-left: 20px;
+  }
+  
+  .doctor-resume ul li {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 5px;
+  }
+  
+  /* Doctor Gallery Section */
+  .doctor-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 40px;
+  }
+  
+  .gallery-item {
+    width: 48%;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .gallery-item img {
+    width: 100%;
+    border-radius: 8px;
+  }
+  
+  .gallery-item p {
+    text-align: center;
+    font-size: 14px;
+    color: #444;
+    margin-top: 10px;
+  }
+  
+  /* Surgery Cost Section */
+  .surgery-cost {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 40px;
+  }
+  
+  .cost-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 48%;
+  }
+  
+  .cost-card h3 {
+    font-size: 22px;
+    color: #9c27b0;
+    margin-bottom: 10px;
+  }
+  
+  .cost-card p {
+    font-size: 16px;
+    color: #444;
+  }
+  
+  .cost-card .btn {
+    text-decoration: none;
+    background-color: #9c27b0;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-size: 14px;
+    display: inline-block;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .cost-card .btn:hover {
+    background-color: #7b1fa2;
+  }
+  
+  /* Location Section */
+  .location-info {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-top: 40px;
+  }
+  
+  .location-info h2 {
+    font-size: 24px;
+    color: #9c27b0;
+    margin-bottom: 15px;
+  }
+  
+  .location-info p {
+    font-size: 16px;
+    color: #444;
+  }
+  
+  .location-info .map {
+    width: 100%;
+    height: 300px;
+    background-color: #ddd;
+    margin-top: 20px;
+    border-radius: 8px;
+  }
+  
+  /* Responsive Design */
+  @media screen and (max-width: 768px) {
+    .hospital-card,
+    .cost-card,
+    .doctor-gallery .gallery-item {
+      width: 100%;
+    }
+  
+    .hospital-info {
+      flex-direction: column;
+    }
+  
+    .doctor-gallery {
+      flex-direction: column;
+    }
+  }
+  
